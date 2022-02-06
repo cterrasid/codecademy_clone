@@ -1,0 +1,136 @@
+/* HEADER STYLES */
+
+.header {
+    position: sticky;
+}
+
+
+/* Navbar */
+
+.navbar {
+    height: 4rem;
+    background-color: var(--color-background);
+    padding: 0 1rem;
+}
+
+.navbar__list {
+    display: flex;
+    height: 100%;
+    place-items: center;
+}
+
+.navbar__list-element:first-child {
+    position: relative;
+}
+
+.navbar__list-element:nth-child(2) {
+    margin-left: auto;
+}
+
+
+/* Logo */
+
+.navbar__logo {
+    height: 1.688rem;
+    display: inline-block;
+    color: var(--color-text);
+}
+
+.navbar__logo::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    bottom: -6px;
+    left: -6px;
+    right: -6px;
+}
+
+.navbar__logo:hover {
+    color: var(--color-primary);
+}
+
+.navbar__logo-svg {
+    height: 100%;
+}
+
+
+/* Log in Button */
+
+.navbar__list-element--login {
+    display: flex;
+    width: 3rem;
+    height: 1.5rem;
+    place-items: center;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-weight: 700;
+    background: none;
+    color: var(--color-text);
+    position: relative;
+}
+
+.navbar__list-element--login::before {
+    content: "";
+    transition: opacity 150ms ease-in;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    z-index: 0;
+    opacity: 0;
+    border-radius: 0.25rem;
+    background: var(--color-text);
+}
+
+.navbar__list-element--login:hover {
+    color: var(--color-primary);
+}
+
+.navbar__list-element--login:hover:before {
+    opacity: 0.05;
+}
+
+
+/* Burger menu */
+
+.navbar__menu-btn {
+    display: inline-flex;
+    border-radius: 0.25rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    cursor: pointer;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    position: relative;
+}
+
+.navbar__menu-btn::after {
+    content: "";
+    transition: opacity 150ms ease-in;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    z-index: 0;
+    opacity: 0;
+    border-radius: 0.25rem;
+    color: var(--color-text);
+    background: var(--color-text);
+}
+
+.navbar__menu-btn:hover:after {
+    opacity: 0.05;
+}
+
+.navbar__menu-btn:hover {
+    color: var(--color-primary);
+}
+
+.burger-menu {
+    height: calc(100% - 0.875rem);
+    width: calc(100% - 0.875rem);
+}
