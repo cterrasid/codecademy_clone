@@ -1,11 +1,7 @@
 import * as React from "react";
 
 const CodecademyLogoImg = (props) => (
-  <svg
-    viewBox="0 0 102 21.705"
-    className="gamut-mmsbw8-LogoSvg ektf5w70"
-    {...props}
-  >
+  <svg viewBox="0 0 102 21.705" {...props}>
     <title>{"Codecademy Logo"}</title>
     <path
       fill="currentColor"

@@ -25,7 +25,9 @@ module.exports = (api) => {
                     "~": "./src",
                     Components: "./src/components",
                     Pages: "./src/pages",
-                    Images: "./src/images"
+                    Images: "./src/images",
+                    Icons: "./src/icons",
+                    Fonts: "./src/fonts"
                 }
             }
         ]

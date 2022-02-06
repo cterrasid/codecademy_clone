@@ -18,6 +18,11 @@ const styleLoader = {
     use: ["style-loader", "css-loader", "sass-loader"]
 };
 
+const fileLoader = {
+    test: /\.(woff|woff2|eot|ttf|otf)$/,
+    use: "file-loader"
+};
+
 module.exports = (env, arg) => {
     const { mode } = arg;
     const isProduction = mode === "production";
@@ -37,7 +42,7 @@ module.exports = (env, arg) => {
             new HtmlWebpackPlugin({ template: "src/index.html" })
         ],
         module: {
-            rules: [babelLoader, styleLoader]
+            rules: [babelLoader, styleLoader, fileLoader]
         },
         devServer: {
             open: true,
