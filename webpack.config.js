@@ -23,6 +23,13 @@ const fileLoader = {
     use: "file-loader"
 };
 
+const imageLoader = {
+    test: /\.(jpg|jpeg|png)$/,
+    use: {
+        loader: "url-loader"
+    }
+};
+
 module.exports = (env, arg) => {
     const { mode } = arg;
     const isProduction = mode === "production";
@@ -42,7 +49,7 @@ module.exports = (env, arg) => {
             new HtmlWebpackPlugin({ template: "src/index.html" })
         ],
         module: {
-            rules: [babelLoader, styleLoader, fileLoader]
+            rules: [babelLoader, styleLoader, fileLoader, imageLoader]
         },
         devServer: {
             open: true,

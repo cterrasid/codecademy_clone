@@ -27,7 +27,8 @@ module.exports = (api) => {
                     Pages: "./src/pages",
                     Images: "./src/images",
                     Icons: "./src/icons",
-                    Fonts: "./src/fonts"
+                    Fonts: "./src/fonts",
+                    Patterns: "./src/patterns"
                 }
             }
         ]
